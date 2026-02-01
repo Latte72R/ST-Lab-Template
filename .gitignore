@@ -1,0 +1,10 @@
+
+Desktop.ini
+*.Identifier
+
+*~
+
+*.log
+*.tmp
+
+template.pdf
