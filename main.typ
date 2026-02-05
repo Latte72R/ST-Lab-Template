@@ -218,8 +218,4 @@
 
 = コンパイル
 
-ローカルでは次でPDFを生成できます．
-
-#raw("typst compile docs.typ", lang: "bash")
-
-VS Codeでは Tinymist Typst 拡張機能を使うとプレビューが楽です．
+VS Codeの Tinymist Typst 拡張機能を使うと自動でコンパイルされてプレビューできるので便利です．
