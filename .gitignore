@@ -1,0 +1,14 @@
+build/
+.tools/
+.venv/
+__pycache__/
+*.pdf
+*.xlsx
+*.xls
+*.csv
+*.wav
+*.mp3
+*.zip
+
+# 公開用ソースから生成した閲覧用PDF
+!preview/*.pdf
