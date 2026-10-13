@@ -50,7 +50,7 @@
 
 表紙は `report.with(...)` で指定します．`[]` は空欄，`()` は共同実験者なしを表します．段落は空行で区切ります．
 ```typst
-#import "../template.typ": report, image-placeholder
+#import "../template.typ": report
 #show: doc => report.with(
   subject: [実験題目], name: [菜月 昴],
   student_id: [00000000], coexp: ([エミリア], [レム]),
@@ -66,11 +66,11 @@
 
 == 図・相互参照
 
-画像枠を `image("波形.png", width: 80%)` に置き換えます．ラベル `<...>` を付けると `@...` で番号を参照できます．
+画像は `image("波形.png", width: 80%)` で挿入します．ラベル `<...>` を付けると `@...` で番号を参照できます．
 #demo[
   ```typst
   #figure(
-    image-placeholder(width: 80%),
+    image("波形.png", width: 80%),
     caption: [測定した波形],
   ) <fig:wave>
   @fig:wave に波形を示す．
