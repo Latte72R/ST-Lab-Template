@@ -20,7 +20,7 @@
 ```typst
 #import "../template.typ": report, image-placeholder
 #show: doc => report.with(
-  subject: [実験題目], name: [ナツキ・スバル],
+  subject: [実験題目], name: [菜月 昴],
   student_id: [00000000], coexp: ([エミリア], [レム]),
   exp_y: 2026, exp_m: 4, exp_d: 3,
   dept: [異世界工学科], clazz: [A],

@@ -24,7 +24,7 @@
   ]
 ]
 #let pill(body, pad: 6pt, line: 0.5pt) = box(
-  stroke: line, inset: pad, radius: 100%, baseline: 25%, body,
+  stroke: line, inset: pad, radius: 100%, body,
 )
 #let date_row(y, m, d, h, min) = table(
   columns: (5em, auto, 3em, auto, 3em, auto, 3em, auto, 3em, auto),
@@ -38,7 +38,7 @@
   exp_y: 2026, exp_m: 4, exp_d: 3,
   weekday: [火・ #pill[金]], ampm: [#pill[午前]・ 午後],
   subject: [], dept: [異世界工学科], clazz: [A], student_id: [00000000],
-  name: [ナツキ・スバル],
+  name: [菜月 昴],
   submit: (2026, 4, 10, 12, 0), resubmit: (2026, 4, 17, 12, 0),
   coexp: ([エミリア], [レム], [ラム]),
   temp: [25 °C], humid: [50 %], pressure: [1013 hPa],
