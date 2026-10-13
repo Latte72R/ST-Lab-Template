@@ -1,4 +1,4 @@
-// 共通の表紙と組版。氏名は『Re:ゼロから始める異世界生活』の架空の人物。
+// 共通の表紙と組版。表紙の初期値は記入例です。
 #let body = "Noto Serif CJK JP"
 #let head = "Noto Sans CJK JP"
 
@@ -35,13 +35,13 @@
 #let report(
   doc,
   title: [理工学基礎実験レポート],
-  exp_y: [], exp_m: [], exp_d: [],
+  exp_y: 2026, exp_m: 4, exp_d: 3,
   weekday: [火・ #pill[金]], ampm: [#pill[午前]・ 午後],
-  subject: [], dept: [], clazz: [], student_id: [00000000],
+  subject: [], dept: [異世界工学科], clazz: [A], student_id: [00000000],
   name: [ナツキ・スバル],
-  submit: ([], [], [], [], []), resubmit: ([], [], [], [], []),
+  submit: (2026, 4, 10, 12, 0), resubmit: (2026, 4, 17, 12, 0),
   coexp: ([エミリア], [レム], [ラム]),
-  temp: [], humid: [], pressure: [],
+  temp: [25 °C], humid: [50 %], pressure: [1013 hPa],
 ) = {
   set text(lang: "ja", font: body, size: 11pt)
   set page(paper: "a4", numbering: "1 / 1", number-align: center)

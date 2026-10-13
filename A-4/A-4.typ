@@ -1,15 +1,15 @@
-// 公開用の記入例：氏名は架空，表の値は空欄。理論式・実験条件は自分の実験に合わせて確認する。
+// 一部の情報を伏せた実験レポートの記入例です。
 #import "../template.typ": report, image-placeholder
 
 #show: doc => report.with(
-  exp_y: [],
-  exp_m: [],
-  exp_d: [],
+  exp_y: 2026,
+  exp_m: 4,
+  exp_d: 3,
   subject: [流体実験],
-  submit: ([], [], [], [], []),
-  temp: [],
-  humid: [],
-  pressure: [],
+  submit: (2026, 4, 10, 12, 0),
+  temp: [25 °C],
+  humid: [50 %],
+  pressure: [1013 hPa],
 )(doc)
 
 #set math.equation(numbering: numbering.with("(1.1)"), supplement: "式")

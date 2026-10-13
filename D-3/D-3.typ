@@ -1,12 +1,12 @@
-// 公開用の記入例：氏名は架空，表の値は空欄。理論式・実験条件は自分の実験に合わせて確認する。
+// 一部の情報を伏せた実験レポートの記入例です。
 #import "../template.typ": report, image-placeholder
 
 #show: doc => report.with(
-  exp_y: [],
-  exp_m: [],
-  exp_d: [],
+  exp_y: 2026,
+  exp_m: 4,
+  exp_d: 3,
   subject: [グラフィカル・データ解析],
-  submit: ([], [], [], [], []),
+  submit: (2026, 4, 10, 12, 0),
 )(doc)
 
 = 目的
