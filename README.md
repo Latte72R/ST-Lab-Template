@@ -1,13 +1,16 @@
 # 理工学基礎実験レポート Typst テンプレート
 
 このリポジトリは理工学基礎実験レポートの骨組みを作成するためのTypstテンプレートです．
+
 Typst はWordでは書けないような論文形式の文書を，LaTeX よりも簡単に記述するために設計された組版ツールです．
+
 レポートの作成にあたり，盗用・剽窃は禁止されているため，可能な限り情報を伏せた記入例として収録しています．
 各自で考えて適切なレポートを作成するようにしてください．
 
 ## 使い方
 
 編集には，VS Code拡張の [Tinymist Typst](https://marketplace.visualstudio.com/items?itemName=myriad-dreamin.tinymist) を推奨します．
+
 日本語フォントはNoto Serif CJK JPとNoto Sans CJK JPを使用します．
 これらのフォントが入っていない場合は，先にインストールするか，別のものに置き換えてください．
 
