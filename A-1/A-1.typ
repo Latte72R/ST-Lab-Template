@@ -1,4 +1,4 @@
-// 一部の情報を伏せた実験レポートの記入例です。
+// 一部の情報を伏せた実験レポートの記入例である．
 #import "../template.typ": report, image-placeholder
 
 #show: doc => report.with(
@@ -68,7 +68,7 @@ $ s_"theory" = -E_0/(R C) $
 
 === 実験B
 
-測定結果と考察を記入します．
+測定結果と考察を記入する．
 
 #figure(
   image-placeholder(width: 80%),
@@ -152,4 +152,4 @@ $ f_B = 1/(2 pi r C) $
 
 = 結論
 
-実験結果に基づく結論を記入します．
+実験結果に基づく結論を記入する．

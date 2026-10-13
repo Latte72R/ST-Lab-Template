@@ -1,4 +1,4 @@
-// 一部の情報を伏せた実験レポートの記入例です。
+// 一部の情報を伏せた実験レポートの記入例である．
 
 #import "../template.typ": report, image-placeholder
 
@@ -24,7 +24,7 @@ VDT（Visual Display Terminal）作業における人間の知覚・判断・行
 
 == 実験結果及び考察
 
-測定結果と考察を記入します．
+測定結果と考察を記入する．
 
 #figure(
   image-placeholder(width: 70%),
@@ -59,7 +59,7 @@ VDT（Visual Display Terminal）作業における人間の知覚・判断・行
 
 == 実験結果及び考察
 
-針の色による読み取り誤差と正答率を記入します．
+針の色による読み取り誤差と正答率を記入する．
 
 #figure(
   image-placeholder(width: 70%),
@@ -78,6 +78,6 @@ VDT（Visual Display Terminal）作業における人間の知覚・判断・行
 
 = 結論
 
-実験結果に基づく結論を記入します．
+実験結果に基づく結論を記入する．
 
 #bibliography("refs.bib")

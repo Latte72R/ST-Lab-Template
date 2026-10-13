@@ -1,4 +1,4 @@
-// 一部の情報を伏せた実験レポートの記入例です。
+// 一部の情報を伏せた実験レポートの記入例である．
 #import "../template.typ": report, image-placeholder
 
 #show: doc => report.with(
@@ -11,13 +11,13 @@
 
 = 目的
 
-本実験の目的は,実際の実験に置いて作成された実験データを視覚的に分析し,得られた結果を考察する力を養うことである.
+本実験の目的は,実際の実験に置いて作成された実験データを視覚的に分析し,得られた結果を考察する力を養うことである．
 
 = 実験結果・考察
 
 == 課題1
 
-測定結果と考察を記入します．
+測定結果と考察を記入する．
 
 #figure(
   image-placeholder(width: 100%),
@@ -55,7 +55,7 @@
 
 == 課題2
 
-測定結果と考察を記入します．
+測定結果と考察を記入する．
 
 // Typst：複数行の式は & で位置をそろえ，\ で改行する。
 $ f_lambda(x) = cases((x^lambda - 1)/lambda & "if" lambda != 0, log x & "if" lambda = 0) $
@@ -72,7 +72,7 @@ $ f_lambda(x) = cases((x^lambda - 1)/lambda & "if" lambda != 0, log x & "if" lam
 
 == 課題3
 
-測定結果と考察を記入します．
+測定結果と考察を記入する．
 
 #figure(
   image-placeholder(width: 100%),
@@ -81,7 +81,7 @@ $ f_lambda(x) = cases((x^lambda - 1)/lambda & "if" lambda != 0, log x & "if" lam
 
 == 課題4
 
-測定結果と考察を記入します．
+測定結果と考察を記入する．
 
 #figure(
   grid(columns: 3, gutter: 1em,
@@ -140,7 +140,7 @@ $ f_lambda(x) = cases((x^lambda - 1)/lambda & "if" lambda != 0, log x & "if" lam
 
 == 課題5
 
-測定結果と考察を記入します．
+測定結果と考察を記入する．
 
 #figure(
   block[
