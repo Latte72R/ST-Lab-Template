@@ -1,16 +1,48 @@
 // 実験レポート向けの書き方集。必要なコードを各実験の .typ にコピーする。
 // 参考：https://github.com/mumumu6/typst-template （コードと出力を並べる構成）
 #import "template.typ": body, head, image-placeholder
-#set text(lang: "ja", font: body, size: 10pt)
-#set page(paper: "a4", numbering: "1")
+#let accent = rgb("284b63")
+#let rule = rgb("d7e0e7")
+#let panel = rgb("f4f6f8")
+#set text(lang: "ja", font: body, size: 10.5pt)
+#set par(leading: 0.9em, spacing: 0.9em)
+#set page(
+  paper: "a4", margin: (x: 20mm, y: 18mm),
+  numbering: "1", number-align: right,
+  header: text(font: head, size: 8pt, fill: accent)[Typst 記法集],
+)
 #set heading(numbering: "1.1.")
 #set math.equation(numbering: "(1)", supplement: [式])
 #show heading: set text(font: head)
-#show raw: set text(size: 9pt)
-#let demo(code, output) = grid(
-  columns: (1fr, 1fr), gutter: 1em,
-  [*コード* #parbreak() #code], [*出力* #parbreak() #output],
-)
+#show heading.where(level: 1): set text(size: 22pt, weight: "bold", fill: accent)
+#show heading.where(level: 2): it => block(above: 1.4em, below: 0.7em)[
+  #text(size: 13pt, weight: "bold", fill: accent)[#it]
+  #v(4pt)
+  #line(length: 100%, stroke: 0.6pt + rule)
+]
+#show raw: set text(font: "Noto Sans Mono CJK JP", size: 9pt)
+#show raw.where(block: true): it => block(
+  width: 100%, inset: 9pt, radius: 4pt,
+  fill: panel, stroke: 0.5pt + rule,
+)[
+  #set par(leading: 0.9em)
+  #it
+]
+#let demo(code, output) = block(breakable: false)[
+  #grid(
+    columns: (1fr, 1fr), gutter: 1.2em,
+    [
+      #text(font: head, size: 9pt, weight: "bold", fill: accent)[コード]
+      #v(5pt)
+      #code
+    ],
+    [
+      #text(font: head, size: 9pt, weight: "bold", fill: accent)[出力]
+      #v(5pt)
+      #block(width: 100%, inset: 9pt, radius: 4pt, stroke: 0.5pt + rule)[#output]
+    ],
+  )
+]
 
 = 実験レポートの書き方
 
@@ -48,6 +80,8 @@
   @fig:wave に波形を示す．
 ]
 
+#pagebreak()
+
 == 表・単位
 
 カンマでセルを区切ります．`columns` は列数です．数値は `[0]`，文章は `[条件A]` のように記入します．単位は見出しに記入します．
@@ -55,7 +89,11 @@
   ```typst
   #figure(table(
     columns: 3,
-    table.header([条件], [電圧 (V)], [電流 (mA)]),
+    table.header(
+      [条件],
+      [電圧 (V)],
+      [電流 (mA)],
+    ),
     [条件A], [0], [0],
     [条件B], [0], [0],
   ), caption: [測定値]) <tab:data>
@@ -74,8 +112,12 @@
 #demo[
   ```typst
   $ R = (10.0 plus.minus 0.1) "kΩ" $
-  $ epsilon = abs(x - x_"ref")/abs(x_"ref") times 100 "%" $
-  $ y(t) = y(0) - 1/(R C) integral_0^t u(tau) dif tau $
+  $ epsilon =
+    abs(x - x_"ref")/abs(x_"ref")
+    times 100 "%" $
+  $ y(t) = y(0)
+    - 1/(R C)
+    integral_0^t u(tau) dif tau $
   $ W = mat(a, b; c, d) $
   ```
 ][
@@ -84,6 +126,10 @@
   $ y(t) = y(0) - 1/(R C) integral_0^t u(tau) dif tau $
   $ W = mat(a, b; c, d) $
 ]
+
+#pagebreak()
+
+== 式番号・位置合わせ
 
 複数行の式は `&` で位置をそろえ，`\` で改行します．式にもラベルを付けられます．
 #demo[
